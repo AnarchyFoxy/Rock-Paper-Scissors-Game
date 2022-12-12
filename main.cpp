@@ -7,3 +7,13 @@ int main(int argc, char **argv)
     game();
     return 0;
 }
+
+void game(void)
+{
+    //Variables for game
+    int wins = 0;
+    int losses = 0;
+    int ties = 0;
+    char playerMove;
+    char computerMove;
+}

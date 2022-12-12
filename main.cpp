@@ -1,7 +1,7 @@
 #include <iostream>
 void game(void);
 
-int main(int argc, char **argv)
+int main()
 {
     std::cout << "ROCK, PAPER, SCISSORS!\n";
     game();
@@ -20,9 +20,7 @@ void game(void)
     while(true) //Main game loop
     {
         std::cout << "Wins: " << wins << ", Losses: " << losses << ", Ties: " << ties << "\n";
-
-        //The player input loop
-        while(true)
+        while(true) //The player input loop
         {
             std::cout << "Enter your move: (r)ock, (p)aper (s)cissors or (q)uit: ";
             std::cin >> playerMove;
@@ -36,7 +34,6 @@ void game(void)
             }
             std::cout << "Type one of r, p, s, or q.\n";
         }
-
         //Display what the player choose:
         if (playerMove == 'r')
         {
@@ -50,7 +47,6 @@ void game(void)
         {
             std::cout << "SCISSORS versus... ";
         }
-
         //Display what computer choose:
         srand((unsigned)time(NULL));
         int randomNumber = 1 + (rand() % 3);
